@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.abc.spring.bean.Master" id="master">
+        <property name="masterId" value="100"/>
+        <property name="name" value="牛魔王"></property>
+        <property name="skill" value="吹风"></property>
+    </bean>
+</beans>
