@@ -1,6 +1,8 @@
 package com.abc.spring.test;
 
+import com.abc.spring.abcApplicationContext.abcApplicationContext;
 import com.abc.spring.bean.Master;
+import org.dom4j.DocumentException;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -24,5 +26,13 @@ public class test {
     public void test() {
         File f = new File(this.getClass().getResource("/").getPath());
         System.out.println(f);
+    }
+
+    //测试容器
+    @Test
+    public void test2() throws DocumentException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        abcApplicationContext ioc = new abcApplicationContext("beans.xml");
+        Master master = (Master) ioc.getBean("master");
+        System.out.println("ioc=="+master);
     }
 }
