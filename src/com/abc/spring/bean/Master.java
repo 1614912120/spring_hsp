@@ -1,5 +1,8 @@
 package com.abc.spring.bean;
 
+import org.springframework.stereotype.Component;
+
+@Component(value = "asdv")
 public class Master {
     private Integer masterId;
     private String name;
@@ -38,12 +41,4 @@ public class Master {
         this.skill = skill;
     }
 
-    @Override
-    public String toString() {
-        return "Master{" +
-                "masterId=" + masterId +
-                ", name='" + name + '\'' +
-                ", skill='" + skill + '\'' +
-                '}';
-    }
 }

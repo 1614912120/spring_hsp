@@ -1,7 +1,9 @@
 package com.abc.spring.service;
 
 import com.abc.spring.dao.MemberDAOImpl;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MemberServiceImpl {
     private MemberDAOImpl memberDAO;
 
