@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!--    -->
-    <bean class="com.abc.spring.bean.Master" id="master">
-        <property name="masterId" value="100"/>
-        <property name="name" value="牛魔王"></property>
-        <property name="skill" value="吹风"></property>
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        <!--    -->
+<!--    <bean class="com.abc.spring.bean.Master" id="master">-->
+<!--        <property name="masterId" value="100"/>-->
+<!--        <property name="name" value="牛魔王"></property>-->
+<!--        <property name="skill" value="吹风"></property>-->
+<!--    </bean>-->
 
-    <bean id="memberServiceImpl" class="com.abc.spring.service.MemberServiceImpl">
-        <property name="memberDAO" ref="memberDAOImpl"></property>
-    </bean>
+<!--    <bean id="memberServiceImpl" class="com.abc.spring.service.MemberServiceImpl">-->
+<!--        <property name="memberDAO" ref="memberDAOImpl"></property>-->
+<!--    </bean>-->
 
-    <bean id="memberDAOImpl" class="com.abc.spring.dao.MemberDAOImpl"/>
+<!--    <bean id="memberDAOImpl" class="com.abc.spring.dao.MemberDAOImpl"/>-->
+
+<!--    <context:component-scan base-package="com.abc.Spring2"></context:component-scan>-->
+        <context:component-scan base-package="com.abc.proxy1"/>
+        <aop:aspectj-autoproxy/>
 </beans>
